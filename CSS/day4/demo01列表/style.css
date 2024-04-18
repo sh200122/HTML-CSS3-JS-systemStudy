@@ -1,0 +1,58 @@
+/* 通用样式 */
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+ul,
+ol,
+dl,
+p {
+  font-size: 1.5rem;
+}
+
+li,
+p {
+  line-height: 1.5;
+}
+
+/* 描述列表样式 */
+
+dd,
+dt {
+  line-height: 1.5;
+}
+
+dt {
+  font-weight: bold;
+}
+
+/*在有序列表上设置了大写罗马数字  */
+ol {
+  list-style-type: upper-roman;
+  /* inside，项目符号则位于行内。 */
+  list-style-position: inside;
+}
+
+/* 对于项目符号使用自定义图片 */
+/* ul {
+  list-style-image: url(/CSS/images/star.svg);
+} */
+ul {
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+/* 最好写成这样 */
+ul li {
+  padding-left: 2rem;
+  background-image: url(/CSS/images/star.svg);
+  background-position: 0 0;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+}

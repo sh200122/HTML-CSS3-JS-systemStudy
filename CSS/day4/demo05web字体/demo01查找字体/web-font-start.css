@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'kaushan_scriptregular';
+  /* 需要修改路径./fonts/ */
+  src: url('./fonts/kaushanscript-regular-webfont.woff2') format('woff2'),
+    url('./fonts/kaushanscript-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'cantarellregular';
+  src: url('./fonts/cantarell-regular-webfont.woff2') format('woff2'),
+    url('./fonts/cantarell-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <picture>
+    <!-- 如果视窗的宽度为 908px 或更少，第一个 <source> 元素的图片就会显示。如果视窗的宽度是 909px 或更大，就显示第二张图片。 -->
+    <source media="(max-width:908px)" srcset="./2.png" />
+    <source media="(min-width:909px)" srcset="./1.png" />
+    <img src="./4.png" alt="默认图像">
+  </picture>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+h1 {
+  font-family: "Jersey 10 Charted";
+  font-size: 100px;
+  background-color: skyblue;
+  text-align: center;
+}
+
+p {
+  font-family: "Micro 5 Charted";
+  font-size: 80px;
+  background-color: plum;
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+body {
+  width: 300px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+p {
+  line-height: 1.4;
+}
+
+/* 使用 a 选择器来去掉焦点轮廓 */
+a {
+  outline-color: transparent;
+}
+
+/* 未访问链接 */
+a:link {
+  color: #6900ff;
+}
+
+/* 已访问链接 */
+a:visited {
+  color: #a5c300;
+}
+
+/* 为聚焦链接设置无下划线和背景颜色  */
+a:focus {
+  text-decoration: none;
+  background: #bae498;
+}
+
+/* 为悬停链接设置无下划线和背景颜色  */
+a:hover {
+  text-decoration: none;
+  background: #cdfeaa;
+}
+
+/*链接被激活时为其提供一种反色方案  */
+a:active {
+  background: #6900ff;
+  color: #cdfeaa;
+}

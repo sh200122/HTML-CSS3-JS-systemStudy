@@ -1,0 +1,35 @@
+/* 未分层的样式 */
+body {
+  color: #333;
+}
+
+/* 创建第一个层：`layout` */
+@layer layout {
+  main {
+    display: grid;
+  }
+}
+
+/* 创建第二个层：一个未命名的匿名层 */
+@layer {
+  body {
+    margin: 0;
+  }
+}
+
+/* 创建第三和第四个层：`theme` 和 `utilities` */
+@layer theme, layout, utilities;
+
+/* 向已经存在的 `layout` 层添加样式 */
+@layer layout {
+  main {
+    color: #000;
+  }
+}
+
+/* 创建第五个层：一个未命名的匿名层 */
+@layer {
+  body {
+    margin: 1vw;
+  }
+}

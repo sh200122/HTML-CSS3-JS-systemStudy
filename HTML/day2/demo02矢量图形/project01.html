@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <svg version="1.1" baseProfile="full" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="black" />
+    <circle cx="150" cy="100" r="90" fill="blue" />
+  </svg>
+  <img src="equilateral.svg" alt="triangle with all three sides equal" height="87px" width="100px" /> -->
+  <!-- <svg width="300" height="200">
+    <rect width="100%" height="100%" fill="green" />
+  </svg> -->
+  <svg width="100%" height="100%">
+    <rect width="100%" height="100%" fill="red" />
+    <!-- cx代表圆心的x坐标（水平位置），而cy代表圆心的y坐标（垂直位置）
+    cx="100%"将圆心的水平位置设置为父容器宽度的100%，也就是父容器的最右边。
+    cy="100%"将圆心的垂直位置设置为父容器高度的100%，也就是父容器的最底部。 
+    黑色的边框（stroke="black"）-->
+    <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
+    <!-- 第一个点120,0表示第一个顶点位于画布上的（120, 0）
+    第二个点240,225表示第二个顶点位于（240, 225）
+    第三个点0,225表示第三个顶点位于（0, 225） -->
+    <polygon points="120,0 240,225 0,225" fill="green" />
+    <!-- x="50"设定了元素的水平起始位置，意味着从SVG画布的左边界向右移动50单位。
+    y="100"设定了元素的垂直起始位置，意味着从SVG画布的顶部向下移动100单位。 -->
+    <text x="50" y="100" font-family="Verdana" font-size="55" fill="white" stroke="black" stroke-width="2">
+      Hello!
+    </text>
+  </svg>
+
+</body>
+
+</html>

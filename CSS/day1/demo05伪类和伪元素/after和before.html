@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 将内容插入到文档中 */
+    /* 插入到前面 */
+    .box::before {
+      content: "This should show before the other content. ";
+    }
+
+    /* 插入到后面 */
+    .box::after {
+      content: "This should show before the other content. ";
+    }
+  </style>
+</head>
+
+<body>
+  <p class="box">Content in the box in my HTML page.</p>
+</body>
+
+</html>

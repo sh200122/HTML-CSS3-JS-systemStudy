@@ -1,0 +1,19 @@
+/* 变红色，后面覆盖前面 */
+@layer site, page;
+
+@layer page {
+  h1 {
+    text-decoration: overline;
+    color: red;
+  }
+}
+
+@layer site {
+  h1 {
+    text-decoration: underline;
+    color: green;
+  }
+}
+
+/* this does nothing */
+/* @layer site, page; */

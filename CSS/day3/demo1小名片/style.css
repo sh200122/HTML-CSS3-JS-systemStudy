@@ -1,0 +1,71 @@
+/* 整体样式 */
+body {
+  margin: 0;
+}
+
+html {
+  font-family: 'Helvetica neue', Arial, 'sans serif';
+  font-size: 10px;
+  background-color: #ccc;
+}
+
+* {
+  margin: 0em;
+  padding: 0em;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 35em;
+  height: 22em;
+  margin: 5em auto;
+  background-color: red;
+  border: 0.2em solid black;
+  border-radius: 1.5em;
+}
+
+/* header */
+.card header {
+  background: linear-gradient(rgb(152, 4, 4), red);
+  border-radius: 1.5em 1.5em 0 0;
+}
+
+/* artical */
+.card article img {
+  max-height: 100%;
+  float: right;
+}
+
+/* footer */
+.card footer {
+  background: linear-gradient(red, rgb(152, 4, 4));
+  border-radius: 0 0 1.5em 1.5em;
+}
+
+.card footer,
+.card header {
+  height: 5em;
+}
+
+.card article {
+  height: 12em;
+  background-color: rgb(92, 35, 35, 0.5);
+}
+
+.card article p {
+  color: #ccc;
+  padding: 1em;
+}
+
+.card h2 {
+  font-size: 2em;
+  line-height: 3em;
+  margin-left: 0.5em;
+}
+
+.card footer p {
+  font-size: 1.5em;
+  line-height: 3em;
+  margin-left: 0.5em;
+  font-weight: bold;
+}

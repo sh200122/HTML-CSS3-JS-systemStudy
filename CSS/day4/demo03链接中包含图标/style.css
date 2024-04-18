@@ -1,0 +1,40 @@
+body {
+  width: 300px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+p {
+  line-height: 1.4;
+}
+
+a {
+  outline-color: transparent;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:focus,
+a:hover {
+  border-bottom: 1px solid;
+}
+
+a:active {
+  color: red;
+}
+
+/* 使用一个属性选择器——a[href^="http"]——选中 <a> 元素，但是这样只会选中那些拥有 href 属性，且属性的值以“http”开头的 <a> 元素 */
+a[href^="http"] {
+  background: url("/CSS/images/icons8-external-link-52.png") no-repeat 100% 0;
+  background-size: 16px 16px;
+  /* 在链接上设置 padding-right ，为背景图片留出空间，这样就不会让它和文本重叠 */
+  padding-right: 19px;
+}

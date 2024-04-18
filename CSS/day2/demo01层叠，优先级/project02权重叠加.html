@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 复合选择器会有权重叠加的问题 */
+    /* 权重有叠加但不会有进位 */
+    /* 0，0，0，1 */
+    li {
+      color: blue;
+    }
+
+    /* 0，0，0，1+0，0，0，1=0，0，0，2 */
+    ul li {
+      color: red;
+    }
+
+    /* 0，0，1，0+0，0，0，1=0，0，1，1 */
+    .sh li {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="sh">
+    <li>aaaa</li>
+    <li>bbbb</li>
+    <li>cccc</li>
+  </ul>
+</body>
+
+</html>

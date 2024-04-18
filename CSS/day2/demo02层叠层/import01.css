@@ -1,0 +1,10 @@
+/* 可以将样式表导入具名层、嵌套具名层或匿名层 */
+/* 分别将样式表导入 components 层、components 层中的嵌套 dialog 层和一个未命名层 */
+@import url("components-lib.css") layer(components);
+@import url("dialog.css") layer(components.dialog);
+/* 需写入具体名称 */
+@import url("marketing.css") layer(ssss);
+/* 可以将多个 CSS 文件导入到单个层中 */
+/* 将两个单独的文件导入到单个 social 层中 */
+@import url(comments.css) layer(social);
+@import url(sm-icons.css) layer(social);

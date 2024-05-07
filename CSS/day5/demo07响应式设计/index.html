@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 媒介查询 */
+    /* 以知晓当前的 Web 页面是否被展示为屏幕媒体（也就是说不是印刷文档），且视口至少有 800 像素宽。 */
+    @media screen and (min-width:800px) {
+      .container {
+        margin: 1em 2em;
+      }
+    }
+
+    /* 多个列 */
+    .container {
+      column-count: 3;
+    }
+
+    /* 伸缩盒 */
+    .container {
+      display: flex;
+    }
+
+    .item {
+      flex: 1;
+    }
+
+    /* css网格  */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* 响应式图像 */
+    inm {
+      max-width: 100%;
+    }
+
+    /* 响应式排版 */
+    html {
+      font-size: 1em;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    /* 用户使用至少1200px的屏幕的时候，拿大些的尺寸覆写h1。 */
+    @media (min-width:1200px) {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    /* 使用视口单位实现响应式排版 */
+    h1 {
+      /* 1vw等同于视口宽度的百分之一，即如果你用vw来设定字体大小的话，字体的大小将总是随视口的大小进行改变。 */
+      /* 问题：用户失去了放缩任何使用vw单位的文本的能力。 */
+      /* font-size: 6vw; */
+      /*解决方法 */
+      font-size: calc(1.5rem+3vw);
+    }
+  </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

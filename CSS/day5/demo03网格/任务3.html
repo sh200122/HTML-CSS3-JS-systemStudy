@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Grid: task 3</title>
+
+  <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    body {
+      background-color: #fff;
+      color: #333;
+      font:
+        1.2em / 1.5 Helvetica Neue,
+        Helvetica,
+        Arial,
+        sans-serif;
+      padding: 1em;
+      margin: 0;
+    }
+
+    .grid>* {
+      background-color: #4d7298;
+      border: 2px solid #77a6b6;
+      border-radius: 0.5em;
+      color: #fff;
+      padding: 0.5em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+      grid-template-areas:
+        "one one"
+        "tow three"
+        ". four"
+      ;
+    }
+
+    .one {
+      grid-area: one;
+    }
+
+    .tow {
+      grid-area: tow;
+    }
+
+    .three {
+      grid-area: three;
+    }
+
+    .four {
+      grid-area: four;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 此 grid 中 4 个子元素，初始状态是显示的是 auto-placement. 请通过使用 grid-area 和 grid-template-areas 属性对照下图放置元素的布局。 -->
+  <div class="grid">
+    <div class="one">One</div>
+    <div class="two">Two</div>
+    <div class="three">Three</div>
+    <div class="four">Four</div>
+  </div>
+</body>
+
+</html>

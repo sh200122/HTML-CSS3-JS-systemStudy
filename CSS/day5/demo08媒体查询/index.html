@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 在视口正好是 600 像素的时候，让 body 的文本变为红色 */
+    @media screen and (width:600px) {
+      body {
+        color: skyblue;
+      }
+    }
+
+    /* 让颜色在视口窄于 400 像素的时候变成蓝色 */
+    @media screen and (max-width:400px) {
+      body {
+        color: skyblue;
+      }
+    }
+
+    /* 在设备处于横向的时候改变 body 文本颜色 */
+    /* 竖放（portrait mode）和横放（landscape mode） */
+    @media (orientation:landscape) {
+      body {
+        color: skyblue;
+      }
+    }
+
+    /* }\可以测试用户是否能在一个元素上悬浮 */
+    @media (hover:hover) {
+      body {
+        color: skyblue;
+      }
+    }
+
+    /* 媒体查询中的与逻辑 */
+    /* body 的文字只会在视口至少为 400 像素宽，且设备横放时变为蓝色。 */
+    @media screen and (min-width:400px) and (orientation:landscape) {
+      bosy {
+        color: skyblue;
+      }
+    }
+
+    /* 媒体查询中的或逻辑 */
+    /* 文本会在视口至少为 400 像素宽的时候或者设备处于横放状态的时候变为蓝色 */
+    @media screen and (min-width:400px),
+    screen and (orientation:landscape) {
+      body {
+        color: skyblue;
+      }
+    }
+
+    /* 媒体查询中的非逻辑 */
+    /* 文本只会在朝向为竖着的时候变成蓝色 */
+    @media not all and (orientation:landscape) {
+      body {
+        color: skyblue;
+      }
+    }
+
+    /* 引入媒体查询的点叫断点 */
+  </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

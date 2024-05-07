@@ -5,14 +5,19 @@ html {
 }
 
 .container {
+  /* 容器为弹性盒。其中包含的项目（本例中为链接）将是弹性项。 */
   display: flex;
+  /* 柔性项之间的间隙为容器宽度的 0.625%。 */
   gap: 0.625%;
 }
 
 a {
+  /* 在 Flexbox 容器中，使链接元素均等地占用可用空间 */
   flex: 1;
+  /* 关闭默认的 text-decoration 和 outline */
   text-decoration: none;
   outline-color: transparent;
+  /* 设置行高为字体大小的三倍，这不仅影响行间距，还可以用于垂直居中文本（尤其是在没有指定高度的情况下）。 */
   text-align: center;
   line-height: 3;
   color: black;

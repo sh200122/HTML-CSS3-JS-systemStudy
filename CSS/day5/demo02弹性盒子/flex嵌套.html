@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Complex flexbox example</title>
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    header {
+      background: purple;
+      height: 100px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      line-height: 100px;
+      margin: 0;
+    }
+
+    article {
+      padding: 10px;
+      margin: 10px;
+      background: aqua;
+    }
+
+    /* Add your flexbox CSS below here */
+
+    section {
+      display: flex;
+    }
+
+    article {
+      flex: 1 200px;
+    }
+
+    /* 设置第三个 <article> 元素的子节点的布局同样为 flex，但是属性值为列布局。 */
+    article:nth-of-type(3) {
+      /* 设置flex属性，flex-grow为3，flex-basis为200px，意味着该元素将尝试占据更多的可用空间，并且起始大小为200px */
+      flex: 3 200px;
+      /* 设置flex容器的方向为垂直列排列，并且允许换行 */
+      display: flex;
+      /* flex-direction: column;：这个值指定主轴（flex 主轴）为垂直方向，即 Flex 容器的子项应该从上到下排列。
+        flex-wrap: wrap;：这个值允许 Flex 容器的子项在必要时沿着交叉轴换行。当空间不足以放下所有子项时，它们将开始从上到下堆叠，并在填满一列后换到新列。 */
+      flex-flow: column wrap;
+    }
+
+    /* 选择第三个<article>元素中的第一个<div>子元素 */
+    article:nth-of-type(3) div:first-child {
+      /* 按列排，高度为100px */
+      flex: 1 100px;
+      display: flex;
+      /* 设置flex容器的排列方向为横向，并允许内容换行 */
+      flex-flow: row wrap;
+      /* 设置子元素在交叉轴上（此处为垂直方向）居中对齐 */
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    button {
+      /* 设置flex属性，flex-grow为1，表示按钮将尝试在保持其内容大小的基础上，占据剩余空间 */
+      flex: 1;
+      margin: 5px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Complex flexbox example</h1>
+  </header>
+
+  <section>
+    <article>
+      <h2>First article</h2>
+
+      <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry
+        vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
+        single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health
+        goth gastropub hammock.</p>
+    </article>
+
+    <article>
+      <h2>Second article</h2>
+
+      <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry
+        vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
+        single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health
+        goth gastropub hammock.</p>
+    </article>
+
+    <article>
+      <div>
+        <button>Smile</button>
+        <button>Laugh</button>
+        <button>Wink</button>
+        <button>Shrug</button>
+        <button>Blush</button>
+      </div>
+      <div>
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry
+          vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
+          single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health
+          goth gastropub hammock.</p>
+      </div>
+      <div>
+        <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit.
+          Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid
+          chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+      </div>
+    </article>
+  </section>
+</body>
+
+</html>

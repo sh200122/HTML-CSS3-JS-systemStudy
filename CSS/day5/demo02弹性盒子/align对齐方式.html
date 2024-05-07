@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Flexbox align 0 — starting code</title>
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    body {
+      width: 70%;
+      max-width: 960px;
+      margin: 20px auto;
+    }
+
+    button {
+      font-size: 18px;
+      line-height: 1.5;
+      width: 15%;
+    }
+
+    div {
+      height: 100px;
+      border: 1px solid black;
+    }
+
+    /* Add your flexbox CSS below here */
+    div {
+      display: flex;
+      /* align-items 控制 flex 项在交叉轴上的位置。 */
+      align-items: center;
+      /* justify-content 控制 flex 项在主轴上的位置。 */
+      /* space-around使所有 flex 项沿着主轴均匀地分布，在任意一端都会留有一点空间。 */
+      /* space-between 不会在两端留下任何空间 */
+      justify-content: space-around;
+    }
+
+    button:first-child {
+      /* 可以用 align-self 属性覆盖 align-items 的行为。 */
+      align-self: flex-end;
+      /* “Smile”按钮移动到了主轴的末尾。 */
+      order: 1;
+    }
+
+    /* “Blush”按钮排在主轴的最前面 */
+    button:last-child {
+      order: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <button>Smile</button>
+    <button>Laugh</button>
+    <button>Wink</button>
+    <button>Shrug</button>
+    <button>Blush</button>
+  </div>
+</body>
+
+</html>

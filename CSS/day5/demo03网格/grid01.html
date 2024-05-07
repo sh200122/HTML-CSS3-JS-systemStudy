@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CSS Grid starting point</title>
+  <style>
+    body {
+      width: 90%;
+      max-width: 900px;
+      margin: 2em auto;
+      font: .9em/1.2 Arial, Helvetica, sans-serif;
+    }
+
+    .container>div {
+      border-radius: 5px;
+      padding: 10px;
+      background-color: rgb(207, 232, 220);
+      border: 2px solid rgb(79, 185, 227);
+    }
+
+    .container {
+      display: grid;
+      /* 三个宽度为200px的列 */
+      /* grid-template-columns: 200px 200px 200px; */
+      /* 3 个宽度为 1fr 的列 */
+      /* fr 单位按比例划分了可用空间，每一列的宽度可以会随着可用空间变小而变小。 */
+      /* grid-template-columns: 1fr 1fr 1fr; */
+      /* 混合使用,第一列宽度是300px，剩下的两列会根据剩余的可用空间按比例分配。 */
+      /* grid-template-columns: 300px 2fr 1fr; */
+      /* grid-column-gap (en-US) 属性来定义列间隙；grid-row-gap (en-US) 来定义行间隙；grid-gap (en-US) 可以同时设定两者*/
+      /* grid-gap: 20px; */
+      gap: 20px;
+      /* 得到了 3 个 1fr 的列 */
+      grid-template-columns: repeat(3, 1fr);
+      /* 得到了4个值分别为2fr 1fr 2fr 1fr 的列 */
+      /* grid-template-columns: repeat(2, 2fr 1fr); */
+      /* 隐式网格就是为了放显式网格放不下的元素，浏览器根据已经定义的显式网格自动生成的网格部分。 */
+      /* 此处没有定义grid-template-rows的值，所以高度是100px了 */
+      /* grid-auto-rows: 100px; */
+      /* 尺寸就至少为 100 像素，并且如果内容尺寸大于 100 像素则会根据内容自动调整。 */
+      grid-auto-rows: minmax(100px, auto);
+      /* 随着容器宽度的改变，网格会自动根据容器宽度进行调整，每一列的宽度总是大于 200 像素，并且容器总会被列填满。 */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Simple grid example</h1>
+
+  <div class="container">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+    <div>Six</div>
+    <div>Seven</div>
+  </div>
+
+</body>
+
+</html>
